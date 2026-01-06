@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ShriFoodsProj")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c89161bddb6bfac7b5dd981568886fbcc39f2e3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("ShriFoodsProj")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ShriFoodsProj")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
