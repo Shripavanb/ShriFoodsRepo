@@ -23,10 +23,10 @@
             </a>
 
             <nav class="nav-links">
-                <a asp-page="/Index">Home</a>
-                <a asp-page="/Index#products">Products</a>
-                <a asp-page="/Index#about">About</a>
-                <a asp-page="/Index#contact">Contact</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                <a asp-area="" asp-controller="Home" asp-action="Products">Products</a>
+                <a asp-area="" asp-controller="Home" asp-action="AboutUs">AboutUs</a>
+                <a asp-area="" asp-controller="Home" asp-action="Contact" >ContactUs</a>
             </nav>
 
             <div class="nav-contact">
@@ -38,10 +38,44 @@
     </header>
 
     <!-- MAIN CONTENT -->
+    <div class="container">
     <main role="main">
         @RenderBody()
-    </main>
+        <!--Back to top code-->
+            <a href="#" id="backToTop" class="back-to-top" style="display:none;">↑</a>
 
+            <style>
+                            .back-to-top {
+                                position: fixed;
+                                bottom: 20px;
+                                right: 20px;
+                                padding: 10px;
+                                background: #333;
+                                color: #fff;
+                                border-radius: 50%;
+                                display: none;
+                                z-index: 1000;
+                            }
+            </style>
+
+            <script>
+                            var btt = document.getElementById("backToTop");
+                            window.onscroll = function() {
+                                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                                    btt.style.display = "block";
+                                } else {
+                                    btt.style.display = "none";
+                                }
+                            };
+    
+                            btt.onclick = function(e) {
+                                e.preventDefault();
+                                window.scrollTo({top: 0, behavior: 'smooth'});
+                            };
+            </script>
+            <!---->
+    </main>
+    </div>
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container footer-grid">
@@ -55,9 +89,10 @@
             <div>
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a asp-page="/Index">Home</a></li>
-                    <li><a asp-page="/Index#products">Products</a></li>
-                    <li><a asp-page="/Index#contact">Contact</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Products">Products</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="AboutUs">AboutUs</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">ContactUs</a></li>
                 </ul>
             </div>
 
