@@ -1,5 +1,7 @@
-﻿@{
-    ViewData["Title"] = "Home-Shri Foods";
+﻿@page
+@model ShriFoodsProj.Views.Home.Index1Model
+@{
+    // ViewData["Title"] = "Home-Shri Foods";
 }
 <div id="top"></div>
 <section class="hero">
@@ -20,65 +22,73 @@
         <div class="row">
             <div class="products-grid">
 
-            <div class="product-card">
-                <img src="~/img/labels/Multigrain_Atta_Label.png" />
-                <img src="~/img/Products/Atta/Multigrain_Atta_1kg.png" alt="Multi Grain Atta" />
-                <h3>Multi Grain Atta</h3>
-                <p>Healthy blend of 5 natural grains</p>
-                <span class="price">₹75/kg</span>
-                <a href="tel:+918374499001" class="btn-secondary">Order Now</a>
-            </div>
+                <div class="product-card">
+                    <img src="~/img/labels/Multigrain_Atta_Label.png" />
+                    <img src="~/img/Products/Atta/Multigrain_Atta_1kg.png" alt="Multi Grain Atta" />
+                    <h3>Multi Grain Atta</h3>
+                    <p>Healthy blend of 5 natural grains</p>
+                    <span class="price">₹75/kg</span>
+                    <a href="tel:+918374499001" class="btn-secondary">Order Now</a>
+                </div>
 
-            <div class="product-card">
-                <img src="~/img/labels/Wheat_Grain_Atta_Label.png" />
+                <div class="product-card">
+                    <img src="~/img/labels/Wheat_Grain_Atta_Label.png" />
                     <img src="~/img/Products/Atta/Wheatgrain_Atta_1kg.png" alt="Wheat Atta" />
-                <h3>Wheat Atta</h3>
-                <p>Freshly milled pure wheat</p>
-                <span class="price">₹50/kg</span>
-                <a href="tel:+918374499001" class="btn-secondary">Order Now</a>
-            </div>
+                    <h3>Wheat Atta</h3>
+                    <p>Freshly milled pure wheat</p>
+                    <span class="price">₹50/kg</span>
+                    <a href="tel:+918374499001" class="btn-secondary">Order Now</a>
+                </div>
 
-            <div class="product-card">
-                <img src="~/img/labels/_Jowar_Grain_Atta_Label.png" />
+                <div class="product-card">
+                    <img src="~/img/labels/_Jowar_Grain_Atta_Label.png" />
                     <img src="~/img/Products/Atta/Jowargrain_Atta_1kg.png" alt="Jowari Flourr" />
-                <h3>Jowari Flour</h3>
-                <p>Rich in calcium & fiber</p>
-                <span class="price">₹80/kg</span>
-                <a href="tel:+918374499001" class="btn-secondary">Order Now</a>
+                    <h3>Jowari Flour</h3>
+                    <p>Rich in calcium & fiber</p>
+                    <span class="price">₹80/kg</span>
+                    <a href="tel:+918374499001" class="btn-secondary">Order Now</a>
+                </div>
+
             </div>
+        </div>
+        <br /><br />
+        <div class="row">
+            <div class="products-grid">
 
-        </div></div>
-       <br /><br />
-        <div class="row"><div class="products-grid">
-
-            <div class="product-card">
-                <img src="~/img/labels/Ragi_Grain_Atta_Label.png" />
+                <div class="product-card">
+                    <img src="~/img/labels/Ragi_Grain_Atta_Label.png" />
                     <img src="~/img/Products/Atta/Ragigrain_Atta_500g.png" alt="Ragi Flour" />
                     <h3>Ragi Flour</h3>
                     <p>Rich in calcium & fiber</p>
-                <span class="price">₹80/kg</span>
-                <a href="tel:+918374499001" class="btn-secondary">Order Now</a>
-            </div>
+                    <span class="price">₹80/kg</span>
+             @*        <form method="post" asp-page-handler="AddToCart">
+                        <input type="hidden" name="productId" value="@Model.Product.Id" />
+                        <input type="number" name="quantity" value="1" min="1" class="form-control" />
+                        <button type="submit" class="btn btn-primary">Add to Cart</button>
+                    </form> *@
+                    <span></span> <a href="tel:+918374499001" class="btn-secondary">Order Now</a>
+                </div>
 
-            <div class="product-card">
-                <img src="~/img/labels/Rice_Grain_Atta_Label.png" />
+                <div class="product-card">
+                    <img src="~/img/labels/Rice_Grain_Atta_Label.png" />
                     <img src="~/img/Products/Atta/Ricegrain_Atta_500g.png" alt="Rice Atta" />
-                <h3>Rice Atta</h3>
-                <p>Freshly milled pure Rice</p>
-                <span class="price">₹50/kg</span>
-                <a href="tel:+918374499001" class="btn-secondary">Order Now</a>
-            </div>
+                    <h3>Rice Atta</h3>
+                    <p>Freshly milled pure Rice</p>
+                    <span class="price">₹50/kg</span>
+                    <a href="tel:+918374499001" class="btn-secondary">Order Now</a>
+                </div>
          
-            <div class="product-card">
-                <img src="~/img/labels/Maida_Atta_Label.png" />
+                <div class="product-card">
+                    <img src="~/img/labels/Maida_Atta_Label.png" />
                     <img src="~/img/Products/Atta/Maida_Atta_500g.png" alt="Maida Flour" />
-                <h3>Maida Flour</h3>
-                <p>Rich in calcium & fiber</p>
-                <span class="price">₹60/kg</span>
-                <a href="tel:+918374499001" class="btn-secondary">Order Now</a>
-            </div>
+                    <h3>Maida Flour</h3>
+                    <p>Rich in calcium & fiber</p>
+                    <span class="price">₹60/kg</span>
+                    <a href="tel:+918374499001" class="btn-secondary">Order Now</a>
+                </div>
 
-        </div></div>
+            </div>
+        </div>
         <br /><br />
         <div class="row">
             <div class="products-grid">
